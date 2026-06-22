@@ -44,7 +44,7 @@ be prioritized.
 ## Setup
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/SLICKMAN-TYRUS/south-sudan-conflict-food-security-ml.git
 cd south-sudan-conflict-foodsecurity-ml
 python -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
