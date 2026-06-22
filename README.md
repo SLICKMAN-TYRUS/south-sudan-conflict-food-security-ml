@@ -1,42 +1,42 @@
 # Predicting Food Insecurity Risk from Conflict Dynamics in South Sudan
 
-Summative project for [Module Name], applying classical machine learning and
-deep learning approaches to a real-world problem in South Sudan.
+Summative project for Introduction to Machine Learning, applying classical ML
+and deep learning to predict food insecurity crises from armed conflict patterns.
 
 ## Problem Statement
 
-[Write 2–3 sentences here summarizing your problem statement — expand fully
-in your written report's introduction. Starting point: South Sudan faces
-recurring, overlapping crises of armed conflict and food insecurity. This
-project explores whether county-level conflict event data (ACLED) can help
-anticipate food security outcomes (FEWS NET IPC classifications), as a step
-toward earlier, more targeted humanitarian and peacebuilding response.]
+South Sudan faces recurring, overlapping crises of armed conflict and food
+insecurity. This project investigates whether county-level conflict event data
+(ACLED) can anticipate food security outcomes (FEWS NET IPC classifications),
+supporting earlier, more targeted humanitarian and peacebuilding response.
 
 ## Mission Alignment
 
 This project supports the goal of fostering enduring peace and sustainable
-development in South Sudan and Africa at large, by examining whether
-conflict indicators provide meaningful early-warning signal for food
-insecurity — informing where peacebuilding and humanitarian response might
-be prioritized.
+development in South Sudan and Africa at large — examining whether conflict
+indicators provide meaningful early-warning signal for food insecurity, and
+informing where peacebuilding and humanitarian response should be prioritised.
 
 ## Repository Structure
 
 ```
 .
 ├── data/
-│   ├── raw/                    # Original ACLED and FEWS NET downloads
-│   └── README.md               # Data dictionary, sources, access dates
+│   ├── raw/                        # ACLED and FEWS NET CSVs (add yours here)
+│   └── README.md                   # Data dictionary, sources, known issues
 ├── notebooks/
-│   └── main_analysis.ipynb     # Full pipeline: EDA, preprocessing, models, evaluation
+│   └── main_analysis.ipynb         # Full pipeline: EDA → preprocessing → models → evaluation
 ├── src/
-│   ├── data_loading.py         # CSV loaders
-│   └── preprocessing.py        # County standardization, aggregation, merge logic
+│   ├── __init__.py
+│   ├── data_loading.py             # CSV loaders
+│   └── preprocessing.py            # Cleaning, aggregation, merge logic
 ├── docs/
-│   ├── experiment_log.md       # Running log of all experiments (rubric requirement)
-│   └── report_outline.md       # Checklist for the written report's required sections
+│   ├── experiment_log.md           # Running log of all experiments (rubric requirement)
+│   └── report_outline.md           # Written report checklist
 ├── reports/
-│   └── figures/                # Exported plots for use in the written report
+│   └── figures/                    # Exported plots for the written report
+├── scripts/
+│   └── build_notebook.py           # Regenerates main_analysis.ipynb from scratch
 ├── requirements.txt
 └── README.md
 ```
@@ -44,35 +44,30 @@ be prioritized.
 ## Setup
 
 ```bash
-git clone https://github.com/SLICKMAN-TYRUS/south-sudan-conflict-food-security-ml.git
-cd south-sudan-conflict-foodsecurity-ml
 python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
+source venv/bin/activate            # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 jupyter notebook notebooks/main_analysis.ipynb
 ```
 
 ## Data Sources
 
-- **ACLED** (Armed Conflict Location & Event Data Project) — South Sudan,
-  event-level conflict data. https://acleddata.com
-- **FEWS NET** (Famine Early Warning Systems Network) — South Sudan, IPC
-  food security phase classifications. https://fews.net
+- **ACLED** — Armed Conflict Location & Event Data Project, South Sudan.
+  https://acleddata.com
+- **FEWS NET** — Famine Early Warning Systems Network, IPC classifications.
+  https://fews.net
 
-Full attribution, filter settings, and known data issues: see
-[`data/README.md`](data/README.md).
+See `data/README.md` for full attribution, filter settings, and known issues.
 
 ## Deliverables
 
 - Written report: [link]
 - Demo video: [link]
-- This repository: [link]
+- GitHub repository: [link]
 
-## Reproducibility Notes
+## Reproducibility
 
-- Random seeds are set in the notebook's setup cell (`SEED = 42`) for numpy,
-  Python's `random`, and TensorFlow.
-- Raw data is committed to this repo (`data/raw/`) so the notebook runs
-  without needing ACLED/FEWS NET credentials.
-- Run all cells top-to-bottom from a fresh kernel before submitting, to
-  confirm there are no hidden state dependencies.
+- Random seed `SEED = 42` set in the notebook setup cell for numpy, Python
+  `random`, and TensorFlow.
+- Raw data committed to `data/raw/` so the notebook runs without credentials.
+- Run all cells top-to-bottom from a fresh kernel before submitting.

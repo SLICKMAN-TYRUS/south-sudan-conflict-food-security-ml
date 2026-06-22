@@ -1,6 +1,7 @@
 # Python
 __pycache__/
 *.pyc
+*.pyo
 .ipynb_checkpoints/
 
 # Virtual environments
@@ -8,14 +9,18 @@ venv/
 .venv/
 env/
 
-# Environment variables / secrets
+# Environment / secrets
 .env
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Model artifacts (regenerable, can be large)
+# Model artifacts (large, regenerable)
 *.h5
 *.keras
 *.pkl
+*.joblib
+
+# Data files — comment out if you want to commit raw CSVs
+# data/raw/*.csv

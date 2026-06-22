@@ -1,0 +1,5 @@
+Place your two raw CSV files here:
+  - acled_south_sudan.csv
+  - fewsnet_ipc_south_sudan.csv
+
+See data/README.md for download instructions and required filter settings.
