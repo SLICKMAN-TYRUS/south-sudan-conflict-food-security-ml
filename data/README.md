@@ -15,7 +15,7 @@
 https://acleddata.com — register at acleddata.com/access to download.
 **Download filters used:** Country = South Sudan; Date range = 2011-05-19 to
 2025-06-21; all event types and actor types included; output = CSV.
-**⚠️ Known issue:** Date maximum is 2025-06-21 (one year short of present).
+** Known issue:** Date maximum is 2025-06-21 (one year short of present).
 Note this explicitly in your report's methodology section as a data limitation.
 **Attribution:** Cite per ACLED Terms of Use: https://acleddata.com/terms-of-use
 
@@ -59,12 +59,12 @@ https://fews.net — data available at https://fews.net/data
 | `Phase` | str | `1`–`5`, `3+` (Crisis-or-worse), `all` |
 | `Percentage` | float | Population share in that phase |
 
-**⚠️ Use `current` rows only for labels.** The `first projection` and
+** Use `current` rows only for labels.** The `first projection` and
 `second projection` rows are FEWS NET's own analyst forecasts — training on
 them means learning to imitate analysts, not predicting reality from conflict
 signals. See `src/preprocessing.py → filter_ipc()` for implementation.
 
-**⚠️ Filter out `Returnees`.** This is a population category, not a county.
+** Filter out `Returnees`.** This is a population category, not a county.
 
 ---
 
